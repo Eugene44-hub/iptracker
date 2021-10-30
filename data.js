@@ -1,6 +1,6 @@
 class Details {
     constructor(ip) {
-        this.url = `http://ip-api.com/json/${ip}`;
+        this.url = `https://ipapi.co/${ip}/json/`;
     }
 
     async getIP() {
@@ -29,15 +29,15 @@ go.addEventListener('click', e => {
 
     details.getIP()
         .then(data => {
-            showIP.textContent = data.json.query;
-            address.textContent = data.json.city + ", " + data.json.country;
+            showIP.textContent = data.json.ip;
+            address.textContent = data.json.region;
             timezone.textContent = data.json.timezone;
-            isp.textContent = data.json.isp;
-            let lat = data.json.lat;
-            let lon = data.json.lon;
-            console.log(data.json.lat)
-            console.log(data.json.lon)
-
+            isp.textContent = data.json.org;
+            let lat = data.json.latitude;
+            let lon = data.json.longitude;
+            // console.log(data.json.lat)
+            // console.log(data.json.lon)
+            console.log(data)
             mapboxgl.accessToken = 'pk.eyJ1IjoiZXVnZW5pY3MiLCJhIjoiY2t2MGM0b3N1MDFqdDJvbHNkcjlrZTNlMSJ9.fK6MzVndal6J3DSmNxsFsw';
             var map = new mapboxgl.Map({
                 container: 'map',
