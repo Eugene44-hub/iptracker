@@ -58,14 +58,14 @@ body {
 .details {
     display: flex;
     padding: 15px;
-    margin: 20px;
-    margin-bottom: 0px;
     text-align: center;
     background-color: white;
     border-radius: 20px;
     transform: translateY(65%);
     flex-wrap: wrap;
     justify-content: center;
+    width: 80%;
+    margin: auto;
 }
 
 .border-right {
@@ -113,6 +113,6 @@ body {
         transform: translate(0%, 100%);
     }
     #ip {
-	    width: 200px;
-	}
+        width: 200px;
+    }
 }
